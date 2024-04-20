@@ -155,12 +155,11 @@ $ cd /etc/ssh
 # where all the host key are there (importent: deleted ssh host keys before, while cloning the servers
 ```
 
-- things should to edited for security in sshd_config file
+- things should edited for security in /etc/sshd_config file
 ```
   # port 22 <2222>
   # PermitRootLogin yes <no>
   # PasswordAuthentication yes <no>
-  # 
 ```
 - Password authentication is very import for 
 - In /etc/ssh you can the global ssh_config file for all user in server
@@ -188,5 +187,5 @@ ssh -p <port no> root@[IP]
   ```
   journalctl -fu ssh
   ```
- -  f : fallow the logs
+ -  f : follow the logs
  -  U : unit or service 
