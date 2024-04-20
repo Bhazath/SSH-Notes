@@ -108,7 +108,7 @@ To check what is going while connecting to remote server
 $ ssh -v <user@[IP]>
 ```
 ```
-user@Admin-Gost:~/.ssh$ ssh nanu
+user@Admin-Gost:~/.ssh$ ssh user@[IP]
 Enter passphrase for key '/home/gost/.ssh/id_rsa':          # User Passphrase for securty keys
 ```
 ```
