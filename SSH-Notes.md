@@ -178,4 +178,15 @@ ssh -p <port no> root@[IP]
 
 ## 6) Troubleshooting
 
-
+- First Check the network layer
+- Check the file permissions of file (XRW)
+- Check the auth.log file
+  ```
+  tail -f /var/log/auth.log
+  ```
+- insted of auth.log you can use journalctl
+  ```
+  journalctl -fu ssh
+  ```
+ -  f : fallow the logs
+ -  U : unit or service 
