@@ -1,7 +1,7 @@
 #  SSH
 ---
 
-OpenSSH is the tool of choice for managing Linux installations remotely - and is indispensable in DevOps, Cloud, System Administration, Hosting, and more. Since it's so widely used, you should definitely learn it. In this video, I go over all the basics you need to use OpenSSH in your workflow. This includes understanding the difference between the client and server binaries, how to connect, config files, keys, and more!
+OpenSSH is the tool of choice for managing Linux installations remotely - and is indispensable in DevOps, Cloud, System Administration, Hosting, and more. Since it's so widely used.
 
 ## 1) Connecting to a server via OpenSSH
 ---
