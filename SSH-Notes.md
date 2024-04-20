@@ -131,9 +131,51 @@ $ ssh -i ~/.ssh/<name id> root@[IP]  # -i input file, using privat key to login
 ```
 it will prompit for the passphrase 
 
+### How to start SSH Agent
+```
+ps aux | grep ssh-agent
+```
 
-
-
-
+```
+# Start ssh agent (workes only for this terminal window or session)
+eval "$(ssh-agent)"
+```
+- To add key to ssh agent
+  ```
+  ssh-add ~/.ssh/<name of pravit_key>
+  ```
+  
 ## 5) SSH Server Configuration
+
+
+sshd is the daemon (background process) that runs on a server and listens for incoming SSH connections. It is part of the OpenSSH suite and is responsible for handling secure remote access requests from SSH clients. sshd authenticates users, encrypts communication, and manages user sessions on the server. It ensures secure communication between the client and the server by implementing the SSH protocol.
+
+```
+$ cd /etc/ssh
+# where all the host key are there (importent: deleted ssh host keys before, while cloning the servers
+```
+
+- things should to edited for security in sshd_config file
+```
+  # port 22 <2222>
+  # PermitRootLogin yes <no>
+  # PasswordAuthentication yes <no>
+  # 
+```
+- Password authentication is very import for 
+- In /etc/ssh you can the global ssh_config file for all user in server
+- In sshd_config you can edit port it is used for ssh  
+
+1. ssh_config: This file is used by SSH clients to configure their behavior when connecting to SSH servers. It contains settings such as the default username, preferred authentication methods, host-specific configurations, and other client-side options. Each user on a client machine can have their own ssh_config file located in their home directory under ~/.ssh/, or a system-wide configuration file can be found in /etc/ssh/ssh_config.
+2. sshd_config: Conversely, sshd_config is used by the SSH server daemon (sshd) to configure its behavior and settings. This file is located on the server machine, typically in the /etc/ssh/ directory. It contains server-side settings such as the listening port, allowed authentication methods, access control rules, and other options related to server behavior and security.
+In summary, ssh_config is used by SSH clients to configure their behavior when connecting to servers, while sshd_config is used by the SSH server daemon to configure its behavior and settings.
+
+- If you change port of ssh 
+```
+ssh -p <port no> root@[IP]
+```
+- -P of port number
+
+## 6) Troubleshooting
+
 
