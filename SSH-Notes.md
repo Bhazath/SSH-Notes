@@ -135,14 +135,24 @@ it will prompit for the passphrase
 ```
 ps aux | grep ssh-agent
 ```
-
+- To add key to ssh agent, ssh agent, Will not work every bash shall untill you start the ssh agaent in every bashshell
+- 
 ```
 # Start ssh agent (workes only for this terminal window or session)
-eval "$(ssh-agent)"
+$ eval "$(ssh-agent)"
 ```
-- To add key to ssh agent
   ```
-  ssh-add ~/.ssh/<name of pravit_key>
+  $ ssh-add ~/.ssh/<name of pravit_key>
+
+  $ ssh-add -l # to check pravit key is loded 
+  ```
+- keychain helps you to manage SSH and GPG keys in convernient and secure manner. It acts as a fron
+  ```
+   sudo apt install keychain
+  ```
+  ```
+  ~/.bash_profile
+  eval `keychain --eval --agents ssh <~/.shh/privat_key>`
   ```
   
 ## 5) SSH Server Configuration
