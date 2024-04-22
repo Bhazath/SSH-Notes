@@ -36,6 +36,9 @@ $ /var/log/auth.log
 ```
 (auth.log) Contains system authorization information, including user logins and authentication machinsm that were used.
 
+
+
+
  ## 2) Configuring the OpenSSH Client
 
 To configuring the Openssh ~/.ssh/ creat a config file .ssh folder
