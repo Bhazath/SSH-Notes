@@ -103,9 +103,9 @@ $ touch authorized_key #in .ssh/
 Past the Public key in authorized_keys 
 you can easyly login without password 
 
-To check what is going while connecting to remote server 
+To check what is going while connecting to remote server -v : verbose 
 ```
-$ ssh -v <user@[IP]>
+$ ssh -v <user@[IP]>  
 ```
 ```
 user@Admin-Gost:~/.ssh$ ssh user@[IP]
