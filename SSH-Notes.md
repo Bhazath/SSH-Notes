@@ -134,12 +134,15 @@ $ ssh -i ~/.ssh/<name id> root@[IP]  # -i input file, using privat key to login
 ```
 it will prompit for the passphrase 
 
-### How to start SSH Agent
+### - How to start SSH Agent
+
+SSH Agent is used to manage and securely store SSH keys, enabling automated and streamlined key-based authentication for SSH connections. It simplifies the process of using SSH keys by holding them in memory, allowing you to authenticate without repeatedly entering passphrases, thus enhancing both convenience and security.
+
 ```
 ps aux | grep ssh-agent
 ```
 - To add key to ssh agent, ssh agent, Will not work every bash shall untill you start the ssh agaent in every bashshell
-- 
+  
 ```
 # Start ssh agent (workes only for this terminal window or session)
 $ eval "$(ssh-agent)"
